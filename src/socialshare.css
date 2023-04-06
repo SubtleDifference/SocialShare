@@ -1,0 +1,264 @@
+/*!
+ * Project Name: SocialShare
+ * Author: Stephen Neate
+ * License: MIT License
+ * Copyright (c) 2023 Subtle Difference https://subtledifference.com.au
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+    .socialshare .social-icons {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .socialshare .social-icons li {
+        margin: 0 10px;
+    }
+    .socialshare .social-icons a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #eee;
+        color: #333;
+        transition: all 0.3s ease;
+    }
+    .socialshare .social-icons a:hover {
+        transform: scale(1.1);
+    }
+    .socialshare .social-icons .facebook {
+        background-color: #3b5998;
+        color: #fff;
+    }
+    .socialshare .social-icons .twitter {
+        background-color: #1da1f2;
+        color: #fff;
+    }
+    .socialshare .social-icons .linkedin {
+        background-color: #0077b5;
+        color: #fff;
+    }
+    .socialshare .social-icons .email {
+        background-color: #d44638;
+        color: #fff;
+    }
+    .socialshare .social-icons .sms {
+        background-color: #29a9e0;
+        color: #fff;
+    }
+    .socialshare .social-icons .reddit {
+        background-color: #ff4500;
+        color: #fff;
+    }
+    .socialshare .social-icons .whatsapp {
+        background-color: #25D366;
+        color: #fff;
+    }
+    .socialshare .social-icons .pinterest {
+        background-color: #E60023;
+        color: #fff;
+    }
+    .socialshare.inlinesocials .social-icons a[data-ss-title]::after {
+        content: attr(data-ss-title);
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: inherit;
+        color: inherit;
+        padding: 5px 10px;
+        border-radius: 5px;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+    .socialshare.inlinesocials .social-icons a[data-ss-title]::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 10px;
+        height: 10px;
+        background-color: inherit;
+        z-index: -1;
+    }
+    .socialshare.inlinesocials .social-icons a:hover[data-ss-title]::after {
+        opacity: 1;
+        top: -50px;
+    }
+    .socialshare.inlinesocials .social-icons a:hover[data-ss-title]::before {
+        top: -21px;
+    }
+    .socialshare.fixedsocials {
+        position: fixed;
+        top: 160px;
+        left: -100px;
+        z-index: 9999;
+        animation-name: slideIn;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        visibility: visible;
+    }
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+            visibility: visible;
+            left: 0;
+        }
+        60% {
+            transform: translateX(40%);
+            visibility: visible;
+            left: 0;
+        }
+        80% {
+            transform: translateX(-30%);
+            visibility: visible;
+            left: 0;
+        }
+        100% {
+            transform: translateX(0%);
+            visibility: visible;
+            left: 0;
+        }
+    }
+    .socialshare.fixedsocials .social-icons {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .socialshare.fixedsocials .social-icons li {
+        margin: 0;
+        width: 40px;
+        height: 40px;
+    }
+    .socialshare.fixedsocials .social-icons a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-color: #eee;
+        color: #333;
+        transition: all 0.3s ease;
+    }
+    .socialshare.fixedsocials .social-icons a:hover {
+        transform: scale(1.1);
+    }
+    .socialshare.fixedsocials .social-icons .facebook {
+        background-color: #3b5998;
+        color: #fff;
+    }
+    .socialshare.fixedsocials .social-icons .twitter {
+        background-color: #1da1f2;
+        color: #fff;
+    }
+    .socialshare.fixedsocials .social-icons .linkedin {
+        background-color: #0077b5;
+        color: #fff;
+    }
+    .socialshare.fixedsocials .social-icons .email {
+        background-color: #d44638;
+        color: #fff;
+    }
+    .socialshare.fixedsocials .social-icons .sms {
+        background-color: #29a9e0;
+        color: #fff;
+    }
+    .socialshare.fixedsocials .social-icons .reddit {
+        background-color: #ff4500;
+        color: #fff;
+    }
+    .socialshare.fixedsocials .social-icons .whatsapp {
+        background-color: #25D366;
+        color: #fff;
+    }
+    .socialshare.fixedsocials .social-icons .pinterest {
+        background-color: #E60023;
+        color: #fff;
+    }
+
+    /* Styles for social share icons when screen size is below 990px */
+    @media screen and (max-width: 990px) {
+        .socialshare.fixedsocials {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            animation: none;
+            visibility: visible;
+        }
+        .socialshare.fixedsocials ul.social-icons {
+            width: 100%;
+        }
+        .socialshare.fixedsocials .social-icons {
+            flex-direction: row;
+        }
+        .socialshare.fixedsocials li {
+            margin: 0;
+            display: inline-block;
+            flex: 1;
+            text-align: center;
+        }
+    }
+    @media screen and (min-width: 990px) {
+        .socialshare.fixedsocials .social-icons a[data-ss-title]::after {
+            content: attr(data-ss-title);
+            position: absolute;
+            top: 0;
+            left: 100%;
+            height: inherit;
+            white-space: nowrap;
+            justify-content: center;
+            align-items: center;
+            background-color: inherit;
+            color: inherit;
+            z-index: inherit;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-10px);
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+        }
+        .socialshare.fixedsocials .social-icons a:hover[data-ss-title]::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /*override class for custom theme all one colour */
+    .customtheme .social-icons a {
+        background-color: #555 !important;
+        color: #fff !important;
+    }
