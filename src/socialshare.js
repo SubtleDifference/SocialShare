@@ -2,7 +2,7 @@
  * Project Name: SocialShare
  * Author: Stephen Neate
  * License: MIT License
- * Copyright (c) 2023 Subtle Difference https://subtledifference.com.au
+ * Copyright (c) 2023 Subtle Difference https://github.com/SubtleDifference/SocialShare
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
