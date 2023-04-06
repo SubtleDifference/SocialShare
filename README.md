@@ -48,7 +48,7 @@ Here's an example of how to use Social Share on your website:
 <!-- Include the necessary CSS and JS files -->
 <link rel="stylesheet" href="socialshare.min.css">
 <script src="socialshare.min.js"></script>
-```
+
 
 <!-- Add the social share icons with the desired display mode, icon style, and theme -->
 <nav class="socialshare inlinesocials customtheme">
@@ -56,6 +56,7 @@ Here's an example of how to use Social Share on your website:
         <!-- Add your social icons here -->
     </ul>
 </nav>
+```
 
 ### Example
 
@@ -84,13 +85,6 @@ To generate custom HTML for your Social Share icons, use our online generator:
 
 [Social Share Generator](https://subtledifference.com.au/social-share-generator)
 
-### Installation
-
-To use Social Share in your project, simply include the `socialshare.min.js` and `socialshare.min.css` files in your HTML file, as well as the necessary icon libraries (Font Awesome, Bootstrap Icons, or Boxicons).
-
-### Usage
-
-Once you have included the necessary files, you can easily add social share icons to your website using the generated HTML code from the Social Share Generator. See the [example.html](https://github.com/SubtleDifference/SocialShare/blob/main/src/example.html) file for examples of different display modes and themes.
 
 ### Contributing
 
