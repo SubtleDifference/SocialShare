@@ -23,13 +23,17 @@
  * SOFTWARE.
  */
 
+document.addEventListener('DOMContentLoaded', () => {
     const socialIcons = document.querySelectorAll('.social-icons a');
+
     socialIcons.forEach(icon => {
+
         icon.addEventListener('click', e => {
             e.preventDefault();
             const url = encodeURIComponent(window.location.href);
-            const social = icon.classList[1]; // get the second class name (e.g. facebook, twitter, linkedin, sms)
+            const social = icon.className; // get the second class name (e.g. facebook, twitter, linkedin, sms)
             const handle = icon.dataset.ssHandle; // get the value of the data-ss-handle attribute
+
             let shareUrl = '';
             if (social === 'sms') {
                 shareUrl = `sms:?&body=${url}`;
@@ -39,41 +43,42 @@
                 window.open(shareUrl, '_blank');
             }
         });
-    });
 
-    function getShareUrl(social, url, handle) {
-        let shareUrl = '';
-        switch (social) {
-            case 'facebook':
-                shareUrl = `https://www.facebook.com/sharer.php?u=${url}`;
-                break;
-            case 'twitter':
-                shareUrl = `https://twitter.com/intent/tweet?url=${url}`;
-                if (handle) {
-                    shareUrl += `&via=${handle}`;
-                }
-                break;
-            case 'linkedin':
-                shareUrl = `https://www.linkedin.com/shareArticle?url=${url}`;
-                break;
-            case 'email':
-                shareUrl = `mailto:?body=${url}`;
-                break;
-            case 'sms':
-                shareUrl = `sms:?&body=${url}`;
-                break;
-            case 'reddit':
-                shareUrl = `https://www.reddit.com/submit?url=${url}`;
-                break;
-            case 'whatsapp':
-                shareUrl = `https://api.whatsapp.com/send?text=${url}`;
-                break;
-            case 'pinterest':
-                shareUrl = `https://www.pinterest.com/pin/create/button/?url=${url}`;
-                break;
-            default:
-                shareUrl = url;
-        }
-        return shareUrl;
+    });
+});
+
+function getShareUrl(social, url, handle) {
+    let shareUrl = '';
+    switch (social) {
+        case 'facebook':
+            shareUrl = `https://www.facebook.com/sharer.php?u=${url}`;
+            break;
+        case 'twitter':
+            shareUrl = `https://twitter.com/intent/tweet?url=${url}`;
+            if (handle) {
+                shareUrl += `&via=${handle}`;
+            }
+            break;
+        case 'linkedin':
+            shareUrl = `https://www.linkedin.com/shareArticle?url=${url}`;
+            break;
+        case 'email':
+            shareUrl = `mailto:?body=${url}`;
+            break;
+        case 'sms':
+            shareUrl = `sms:?&body=${url}`;
+            break;
+        case 'reddit':
+            shareUrl = `https://www.reddit.com/submit?url=${url}`;
+            break;
+        case 'whatsapp':
+            shareUrl = `https://api.whatsapp.com/send?text=${url}`;
+            break;
+        case 'pinterest':
+            shareUrl = `https://www.pinterest.com/pin/create/button/?url=${url}`;
+            break;
+        default:
+            shareUrl = url;
     }
-    
+    return shareUrl;
+}
