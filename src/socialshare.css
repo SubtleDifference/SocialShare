@@ -133,25 +133,6 @@
     background-color: #e12828;
     color: #fff;
 }
-
-.socialshare .social-icons .instapaper,
-.socialshare.fixedsocials .social-icons .instapaper {
-    background-color: #1f1f1f;
-    color: #fff;
-}
-
-.socialshare .social-icons .kube,
-.socialshare.fixedsocials .social-icons .kube {
-    background-color: #0072bc;
-    color: #fff;
-}
-
-.socialshare .social-icons .livejournal,
-.socialshare.fixedsocials .social-icons .livejournal {
-    background-color: #00b0ea;
-    color: #fff;
-}
-
 .socialshare .social-icons .messenger,
 .socialshare.fixedsocials .social-icons .messenger {
     background-color: #0078ff;
@@ -176,9 +157,9 @@
     color: #fff;
 }
 
-.socialshare .social-icons .wechat,
-.socialshare.fixedsocials .social-icons .wechat {
-    background-color: #1aad19;
+.socialshare .social-icons .rocketchat,
+.socialshare.fixedsocials .social-icons .rocketchat {
+    background-color: #f5455c;
     color: #fff;
 }
 
@@ -400,4 +381,3 @@
     background-color: #4e1741 !important;
     color: #fff !important;
 }
-
