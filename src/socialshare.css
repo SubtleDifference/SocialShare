@@ -23,247 +23,381 @@
  * SOFTWARE.
  */
 
-    .socialshare .social-icons {
-        display: flex;
-        list-style: none;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
+.socialshare .social-icons,
+.socialshare.fixedsocials .social-icons {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.socialshare .social-icons li,
+.socialshare.fixedsocials .social-icons li {
+    margin: 0 10px;
+}
+
+.socialshare .social-icons a,
+.socialshare.fixedsocials .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.socialshare .social-icons a:hover,
+.socialshare.fixedsocials .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.socialshare .social-icons .facebook,
+.socialshare.fixedsocials .social-icons .facebook {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.socialshare .social-icons .twitter,
+.socialshare.fixedsocials .social-icons .twitter {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+.socialshare .social-icons .linkedin,
+.socialshare.fixedsocials .social-icons .linkedin {
+    background-color: #0077b5;
+    color: #fff;
+}
+
+.socialshare .social-icons .email,
+.socialshare.fixedsocials .social-icons .email {
+    background-color: #d44638;
+    color: #fff;
+}
+
+.socialshare .social-icons .sms,
+.socialshare.fixedsocials .social-icons .sms {
+    background-color: #29a9e0;
+    color: #fff;
+}
+
+.socialshare .social-icons .reddit,
+.socialshare.fixedsocials .social-icons .reddit {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+.socialshare .social-icons .whatsapp,
+.socialshare.fixedsocials .social-icons .whatsapp {
+    background-color: #25D366;
+    color: #fff;
+}
+
+.socialshare .social-icons .pinterest,
+.socialshare.fixedsocials .social-icons .pinterest {
+    background-color: #E60023;
+    color: #fff;
+}
+
+.socialshare .social-icons .copy,
+.socialshare.fixedsocials .social-icons .copy {
+    background-color: #4e1741;
+    color: #fff;
+}
+
+.socialshare .social-icons .blogger,
+.socialshare.fixedsocials .social-icons .blogger {
+    background-color: #f57d00;
+    color: #fff;
+}
+
+.socialshare .social-icons .digg,
+.socialshare.fixedsocials .social-icons .digg {
+    background-color: #000000;
+    color: #fff;
+}
+
+.socialshare .social-icons .evernote,
+.socialshare.fixedsocials .social-icons .evernote {
+    background-color: #2dbe60;
+    color: #fff;
+}
+
+.socialshare .social-icons .flipboard,
+.socialshare.fixedsocials .social-icons .flipboard {
+    background-color: #e12828;
+    color: #fff;
+}
+
+.socialshare .social-icons .instapaper,
+.socialshare.fixedsocials .social-icons .instapaper {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.socialshare .social-icons .kube,
+.socialshare.fixedsocials .social-icons .kube {
+    background-color: #0072bc;
+    color: #fff;
+}
+
+.socialshare .social-icons .livejournal,
+.socialshare.fixedsocials .social-icons .livejournal {
+    background-color: #00b0ea;
+    color: #fff;
+}
+
+.socialshare .social-icons .messenger,
+.socialshare.fixedsocials .social-icons .messenger {
+    background-color: #0078ff;
+    color: #fff;
+}
+
+.socialshare .social-icons .print,
+.socialshare.fixedsocials .social-icons .print {
+    background-color: #666666;
+    color: #fff;
+}
+
+.socialshare .social-icons .tumblr,
+.socialshare.fixedsocials .social-icons .tumblr {
+    background-color: #34465d;
+    color: #fff;
+}
+
+.socialshare .social-icons .vk,
+.socialshare.fixedsocials .social-icons .vk {
+    background-color: #45668e;
+    color: #fff;
+}
+
+.socialshare .social-icons .wechat,
+.socialshare.fixedsocials .social-icons .wechat {
+    background-color: #1aad19;
+    color: #fff;
+}
+
+.socialshare .social-icons .weibo,
+.socialshare.fixedsocials .social-icons .weibo {
+    background-color: #e6162d;
+    color: #fff;
+}
+
+.socialshare .social-icons .xing,
+.socialshare.fixedsocials .social-icons .xing {
+    background-color: #026466;
+    color: #fff;
+}
+
+.socialshare .social-icons .printPDF,
+.socialshare.fixedsocials .social-icons .printPDF {
+    background-color: #cc0000;
+    color: #fff;
+}
+
+.socialshare .social-icons .mastodon,
+.socialshare.fixedsocials .social-icons .mastodon {
+    background-color: #3088d4;
+    color: #fff;
+}
+
+
+.socialshare.inlinesocials .social-icons a[data-ss-title]::after {
+    content: attr(data-ss-title);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: inherit;
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.socialshare.inlinesocials .social-icons a[data-ss-title]::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+    z-index: -1;
+}
+
+.socialshare.inlinesocials .social-icons a:hover[data-ss-title]::after {
+    opacity: 1;
+    top: -50px;
+}
+
+.socialshare.inlinesocials .social-icons a:hover[data-ss-title]::before {
+    top: -21px;
+}
+
+.socialshare.fixedsocials {
+    position: fixed;
+    top: 160px;
+    left: -100px;
+    z-index: 9999;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        visibility: visible;
+        left: 0;
     }
-    .socialshare .social-icons li {
-        margin: 0 10px;
+    60% {
+        transform: translateX(40%);
+        visibility: visible;
+        left: 0;
     }
-    .socialshare .social-icons a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #eee;
-        color: #333;
-        transition: all 0.3s ease;
+    80% {
+        transform: translateX(-30%);
+        visibility: visible;
+        left: 0;
     }
-    .socialshare .social-icons a:hover {
-        transform: scale(1.1);
+    100% {
+        transform: translateX(0%);
+        visibility: visible;
+        left: 0;
     }
-    .socialshare .social-icons .facebook {
-        background-color: #3b5998;
-        color: #fff;
-    }
-    .socialshare .social-icons .twitter {
-        background-color: #1da1f2;
-        color: #fff;
-    }
-    .socialshare .social-icons .linkedin {
-        background-color: #0077b5;
-        color: #fff;
-    }
-    .socialshare .social-icons .email {
-        background-color: #d44638;
-        color: #fff;
-    }
-    .socialshare .social-icons .sms {
-        background-color: #29a9e0;
-        color: #fff;
-        visibility: hidden;
-    }
-    .socialshare .social-icons .reddit {
-        background-color: #ff4500;
-        color: #fff;
-    }
-    .socialshare .social-icons .whatsapp {
-        background-color: #25D366;
-        color: #fff;
-    }
-    .socialshare .social-icons .pinterest {
-        background-color: #E60023;
-        color: #fff;
-    }
-    .socialshare.inlinesocials .social-icons a[data-ss-title]::after {
-        content: attr(data-ss-title);
-        position: absolute;
-        top: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: inherit;
-        color: inherit;
-        padding: 5px 10px;
-        border-radius: 5px;
-        z-index: 9999;
-        opacity: 0;
-        transition: opacity 0.2s ease;
-    }
-    .socialshare.inlinesocials .social-icons a[data-ss-title]::before {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%) rotate(45deg);
-        width: 10px;
-        height: 10px;
-        background-color: inherit;
-        z-index: -1;
-    }
-    .socialshare.inlinesocials .social-icons a:hover[data-ss-title]::after {
-        opacity: 1;
-        top: -50px;
-    }
-    .socialshare.inlinesocials .social-icons a:hover[data-ss-title]::before {
-        top: -21px;
-    }
+}
+
+.socialshare.fixedsocials .social-icons {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.socialshare.fixedsocials .social-icons li {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.socialshare.fixedsocials .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: #eee;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.socialshare.fixedsocials .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 990px) {
     .socialshare.fixedsocials {
-        position: fixed;
-        top: 160px;
-        left: -100px;
-        z-index: 9999;
-        animation-name: slideIn;
-        animation-duration: 1s;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        animation: none;
         visibility: visible;
     }
-    @keyframes slideIn {
-        0% {
-            transform: translateX(-100%);
-            visibility: visible;
-            left: 0;
-        }
-        60% {
-            transform: translateX(40%);
-            visibility: visible;
-            left: 0;
-        }
-        80% {
-            transform: translateX(-30%);
-            visibility: visible;
-            left: 0;
-        }
-        100% {
-            transform: translateX(0%);
-            visibility: visible;
-            left: 0;
-        }
+
+    .socialshare.fixedsocials ul.social-icons {
+        width: 100%;
     }
+
     .socialshare.fixedsocials .social-icons {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 0;
-        padding: 0;
+        flex-direction: row;
     }
-    .socialshare.fixedsocials .social-icons li {
+
+    .socialshare.fixedsocials li {
         margin: 0;
-        width: 40px;
-        height: 40px;
+        display: inline-block;
+        flex: 1;
+        text-align: center;
     }
-    .socialshare.fixedsocials .social-icons a {
-        display: flex;
+
+    .socialshare .social-icons .sms {
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .socialshare.fixedsocials .social-icons a[data-ss-title]::after {
+        content: attr(data-ss-title);
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: inherit;
+        white-space: nowrap;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        background-color: #eee;
-        color: #333;
+        background-color: inherit;
+        color: inherit;
+        z-index: inherit;
         transition: all 0.3s ease;
-    }
-    .socialshare.fixedsocials .social-icons a:hover {
-        transform: scale(1.1);
-    }
-    .socialshare.fixedsocials .social-icons .facebook {
-        background-color: #3b5998;
-        color: #fff;
-    }
-    .socialshare.fixedsocials .social-icons .twitter {
-        background-color: #1da1f2;
-        color: #fff;
-    }
-    .socialshare.fixedsocials .social-icons .linkedin {
-        background-color: #0077b5;
-        color: #fff;
-    }
-    .socialshare.fixedsocials .social-icons .email {
-        background-color: #d44638;
-        color: #fff;
-    }
-    .socialshare.fixedsocials .social-icons .sms {
-        background-color: #29a9e0;
-        color: #fff;
-    }
-    .socialshare.fixedsocials .social-icons .reddit {
-        background-color: #ff4500;
-        color: #fff;
-    }
-    .socialshare.fixedsocials .social-icons .whatsapp {
-        background-color: #25D366;
-        color: #fff;
-    }
-    .socialshare.fixedsocials .social-icons .pinterest {
-        background-color: #E60023;
-        color: #fff;
+        opacity: 0;
+        transform: translateX(-10px);
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
     }
 
-    /* Styles for social share icons when screen size is below 990px */
-    @media screen and (max-width: 990px) {
-        .socialshare.fixedsocials {
-            top: auto;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            animation: none;
-            visibility: visible;
-        }
-        .socialshare.fixedsocials ul.social-icons {
-            width: 100%;
-        }
-        .socialshare.fixedsocials .social-icons {
-            flex-direction: row;
-        }
-        .socialshare.fixedsocials li {
-            margin: 0;
-            display: inline-block;
-            flex: 1;
-            text-align: center;
-        }
-        .socialshare .social-icons .sms {
-            visibility: visible;
-        }
-
+    .socialshare.fixedsocials .social-icons a:hover[data-ss-title]::after {
+        opacity: 1;
+        transform: translateX(0);
     }
-    @media screen and (min-width: 990px) {
-        .socialshare.fixedsocials .social-icons a[data-ss-title]::after {
-            content: attr(data-ss-title);
-            position: absolute;
-            top: 0;
-            left: 100%;
-            height: inherit;
-            white-space: nowrap;
-            justify-content: center;
-            align-items: center;
-            background-color: inherit;
-            color: inherit;
-            z-index: inherit;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateX(-10px);
-            display: flex;
-            align-items: center;
-            padding: 0 12px;
-        }
-        .socialshare.fixedsocials .social-icons a:hover[data-ss-title]::after {
-            opacity: 1;
-            transform: translateX(0);
-        }
+}
+
+/* fix for inline on small screens */
+.socialshare.inlinesocials .social-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.socialshare.inlinesocials .social-icons li {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+/* Media query for small screen sizes */
+@media screen and (max-width: 576px) {
+    .socialshare.inlinesocials .social-icons {
+        white-space: normal;
+        display: inline-block;
     }
 
-    /*override class for custom theme all one colour */
-    .customtheme .social-icons a {
-        background-color: #4e1741 !important;
-        color: #fff !important;
+    .socialshare.inlinesocials .social-icons li a {
+        margin: 0 5px;
     }
+}
+
+/*override class for custom theme all one colour */
+.customtheme .social-icons a {
+    background-color: #4e1741 !important;
+    color: #fff !important;
+}
+
