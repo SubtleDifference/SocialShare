@@ -67,6 +67,7 @@
     .socialshare .social-icons .sms {
         background-color: #29a9e0;
         color: #fff;
+        visibility: hidden;
     }
     .socialshare .social-icons .reddit {
         background-color: #ff4500;
@@ -230,6 +231,10 @@
             flex: 1;
             text-align: center;
         }
+        .socialshare .social-icons .sms {
+            visibility: visible;
+        }
+
     }
     @media screen and (min-width: 990px) {
         .socialshare.fixedsocials .social-icons a[data-ss-title]::after {
@@ -259,6 +264,6 @@
 
     /*override class for custom theme all one colour */
     .customtheme .social-icons a {
-        background-color: #555 !important;
+        background-color: #4e1741 !important;
         color: #fff !important;
     }
