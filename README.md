@@ -9,6 +9,7 @@ Social Share is a lightweight and customizable social sharing solution for your 
 - Customizable themes and styles
 - Easy to generate custom HTML code
 - Compatible with Font Awesome, Bootstrap Icons, and Boxicons
+- Less than 10kb of JS and CSS combined
 
 ## Getting Started
 
