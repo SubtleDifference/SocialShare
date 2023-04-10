@@ -89,7 +89,7 @@ function getShareUrl(social, url, handle) {
             input.select();
             document.execCommand('copy');
             document.body.removeChild(input);
-            alert('Copied the generated HTML to clipboard');
+            alert('Copied the URL to your clipboard');
             shareUrl = null;
             break;
         case 'blogger':
