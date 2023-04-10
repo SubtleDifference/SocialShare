@@ -30,7 +30,7 @@ Social Share supports the following display modes:
 
 Choose from the following icon styles for your Social Share icons:
 
-- Font Awesome (`fa`)
+- Font Awesome Brands (`fa-brands`)
 - Bootstrap Icons (`bi`)
 - Boxicons (`bx`)
 
