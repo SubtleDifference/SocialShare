@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.addEventListener('click', e => {
             e.preventDefault();
             const url = encodeURIComponent(window.location.href);
-            const social = icon.className; // get the second class name (e.g. facebook, twitter, linkedin, sms)
-            const handle = icon.dataset.ssHandle; // get the value of the data-ss-handle attribute
+            const social = icon.className;
+            const handle = icon.dataset.ssHandle;
 
             let shareUrl = '';
             if (social === 'sms') {
@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = shareUrl;
             } else {
                 shareUrl = getShareUrl(social, url, handle); // pass handle to getShareUrl function
-                window.open(shareUrl, '_blank');
+                if(shareUrl!= null){
+                    window.open(shareUrl, '_blank');
+                }
             }
         });
 
@@ -77,8 +79,59 @@ function getShareUrl(social, url, handle) {
         case 'pinterest':
             shareUrl = `https://www.pinterest.com/pin/create/button/?url=${url}`;
             break;
+        case 'mastodon':
+            shareUrl = `https://mastodon.social/share?url=${url}`;
+            break;
+        case 'copy':
+            const input = document.createElement('input');
+            input.setAttribute('value', decodeURIComponent(url));
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            alert('Copied the generated HTML to clipboard');
+            shareUrl = null;
+            break;
+        case 'blogger':
+            shareUrl = `https://www.blogger.com/blog-this.g?url=${url}`;
+            break;
+        case 'digg':
+            shareUrl = `https://digg.com/submit?url=${url}`;
+            break;
+        case 'evernote':
+            shareUrl = `https://www.evernote.com/clip.action?url=${url}`;
+            break;
+        case 'flipboard':
+            shareUrl = `https://share.flipboard.com/bookmarklet/popout?v=2&url=${url}`;
+            break;
+        case 'messenger':
+            shareUrl = `fb-messenger://share/?link=${encodeURIComponent(url)}`;
+            break;
+        case 'print':
+            shareUrl = `javascript:window.print()`;
+            break;
+        case 'tumblr':
+            shareUrl = `https://www.tumblr.com/share/link?url=${url}`;
+            break;
+        case 'vk':
+            shareUrl = `https://vk.com/share.php?url=${url}`;
+            break;
+        case 'rocketchat':
+            const message = encodeURIComponent('Check out this link: ' + url);
+            shareUrl = `https://go.rocket.chat/home?msg=${message}`;
+            break;
+        case 'weibo':
+            shareUrl = `https://service.weibo.com/share/share.php?url=${url}`;
+            break;
+        case 'xing':
+            shareUrl = `https://www.xing.com/app/user?op=share;url=${url}`;
+            break;
+        case 'printPDF':
+            shareUrl = `https://www.printfriendly.com/print?url=${url}`;
+            break;
         default:
             shareUrl = url;
     }
     return shareUrl;
 }
+
