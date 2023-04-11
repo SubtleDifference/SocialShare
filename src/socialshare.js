@@ -27,29 +27,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const socialIcons = document.querySelectorAll('.social-icons a');
 
     socialIcons.forEach(icon => {
-
         icon.addEventListener('click', e => {
             e.preventDefault();
             const url = encodeURIComponent(window.location.href);
             const social = icon.className;
             const handle = icon.dataset.ssHandle;
+            const text = encodeURIComponent(icon.dataset.ssText);
 
             let shareUrl = '';
             if (social === 'sms') {
                 shareUrl = `sms:?&body=${url}`;
                 window.location.href = shareUrl;
+            } else if(social === 'facebook' || social === 'linkedin'){
+                shareUrl = getShareUrl(social, url, handle, text);
+                let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=800,left=100,top=100`;
+                open(shareUrl, 'Facebook', params);
             } else {
-                shareUrl = getShareUrl(social, url, handle); // pass handle to getShareUrl function
+                shareUrl = getShareUrl(social, url, handle, text);
                 if(shareUrl!= null){
                     window.open(shareUrl, '_blank');
                 }
             }
         });
-
     });
 });
 
-function getShareUrl(social, url, handle) {
+function getShareUrl(social, url, handle, text) {
     let shareUrl = '';
     switch (social) {
         case 'facebook':
@@ -59,6 +62,9 @@ function getShareUrl(social, url, handle) {
             shareUrl = `https://twitter.com/intent/tweet?url=${url}`;
             if (handle) {
                 shareUrl += `&via=${handle}`;
+            }
+            if (text) {
+                shareUrl += `&text=${text}`;
             }
             break;
         case 'linkedin':
@@ -134,4 +140,3 @@ function getShareUrl(social, url, handle) {
     }
     return shareUrl;
 }
-
