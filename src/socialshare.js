@@ -114,7 +114,8 @@ function getShareUrl(social, url, handle, text) {
             shareUrl = `fb-messenger://share/?link=${encodeURIComponent(url)}`;
             break;
         case 'print':
-            shareUrl = `javascript:window.print()`;
+            window.print();
+            shareUrl = null;            
             break;
         case 'tumblr':
             shareUrl = `https://www.tumblr.com/share/link?url=${url}`;
