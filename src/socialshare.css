@@ -56,6 +56,12 @@
     transform: scale(1.1);
 }
 
+.socialshare .social-icons .bluesky,
+.socialshare.fixedsocials .social-icons .bluesky {
+    background-color: #1185fe;
+    color: #fff;
+}
+
 .socialshare .social-icons .facebook,
 .socialshare.fixedsocials .social-icons .facebook {
     background-color: #3b5998;
