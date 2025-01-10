@@ -67,6 +67,9 @@ function getShareUrl(social, url, handle, text) {
                 shareUrl += `&text=${text}`;
             }
             break;
+        case 'bluesky':
+            shareUrl = `https://bsky.app/intent/compose?text=${url}`;
+            break;
         case 'linkedin':
             shareUrl = `https://www.linkedin.com/shareArticle?url=${url}`;
             break;
