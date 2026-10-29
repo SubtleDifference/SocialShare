@@ -1,0 +1,43 @@
+/*!
+SocialShare v1.1.1
+
+MIT License
+
+Copyright (c) 2023 Subtle Difference
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+:root { color-scheme: light; font: 17px/1.6 system-ui, sans-serif; color: #25212a; background: #f6f4f2; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 64px 24px 120px; }
+main { max-width: 880px; margin: auto; }
+header { padding: 16px 0 32px; }
+h1 { max-width: 14ch; margin: 0 0 20px; font-size: clamp(2.6rem, 7vw, 4.6rem); line-height: 1.05; letter-spacing: -.05em; }
+h2 { margin: 0 0 12px; font-size: 1.5rem; letter-spacing: -.025em; }
+p { max-width: 66ch; margin: 0 0 24px; color: #625866; }
+section { margin-bottom: 20px; padding: 32px; border: 1px solid #e5dfe5; border-radius: 16px; background: #fff; }
+section > .socialshare.inlinesocials .social-icons { justify-content: flex-start; }
+pre { overflow-x: auto; max-width: 100%; margin: 28px 0 0; padding: 20px; background: #f6f4f7; border-radius: 8px; font-size: .8rem; }
+code { font-family: ui-monospace, monospace; }
+a { color: #4e1741; }
+a:focus-visible { outline: 3px solid #4e1741; outline-offset: 3px; }
+.customtheme { --ss-radius: 8px; --ss-gap: 12px; }
+footer { display: flex; flex-wrap: wrap; gap: 24px; padding: 12px 0; font-size: .9rem; }
+@media (min-width: 991px) { body { padding-left: 150px; } }
+@media (max-width: 600px) { body { padding: 32px 16px 150px; } section { padding: 24px 20px; } }

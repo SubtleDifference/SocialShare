@@ -1,161 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+SocialShare v1.1.1
+
+MIT License
+
+Copyright (c) 2023 Subtle Difference
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Share - Example</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.minxx.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SocialShare — simple sharing, no icon fonts</title>
     <link rel="stylesheet" href="socialshare.min.css">
+    <link rel="stylesheet" href="example.css">
+    <script src="socialshare.min.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1 class="my-5">Social Share - Example</h1>
-        
-        <h2>Floating Example</h2>
-		<p>This sits on the left hand side of your page or on the footer for smaller browsers in a fixed position. There is a 2 second delay before it slides into place</p>
-        <div id="floating-example" class="mb-5">
-			<nav class="socialshare fixedsocials">
-				<ul class="social-icons">
-					<li><a href="#" class="facebook" data-ss-title="Facebook"><i class="bx bxl-facebook"></i></a></li>
-					<li><a href="#" class="twitter" data-ss-title="Twitter"><i class="bx bxl-twitter"></i></a></li>
-					<li><a href="#" class="linkedin" data-ss-title="LinkedIN"><i class="bx bxl-linkedin"></i></a></li>
-					<li><a href="#" class="pinterest" data-ss-title="Pinterest"><i class="bx bxl-pinterest"></i></a></li>
-					<li><a href="#" class="reddit" data-ss-title="Reddit"><i class="bx bxl-reddit"></i></a></li>
-					<li><a href="#" class="whatsapp" data-ss-title="WhatsApp"><i class="bx bxl-whatsapp"></i></a></li>
-					<li><a href="#" class="email" data-ss-title="Email"><i class="bx bx-envelope"></i></a></li>
-					<li><a href="#" class="sms" data-ss-title="SMS"><i class="bx bx-message"></i></a></li>
-				</ul>
-			</nav>
-        </div>
-        
-        <h2>Inline Example</h2>
-		<p>Place anywhere you want to have the share icons on your page.</p>
-        <div id="inline-example" class="mb-5">
-			<nav class="socialshare inlinesocials ">
-				<ul class="social-icons">
-					<li><a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a></li>
-					<li><a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a></li>
-					<li><a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
-					<li><a href="#" class="pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
-					<li><a href="#" class="reddit"><i class="fa-brands fa-reddit"></i></a></li>
-					<li><a href="#" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
-					<li><a href="#" class="email"><i class="fa fa-envelope"></i></a></li>
-					<li><a href="#" class="sms"><i class="fa fa-comment"></i></a></li>
-					<li><a href="#" class="copy"><i class="fa fa-copy"></i></a></li>
-					<li><a href="#" class="mastodon"><i class="fa-brands fa-mastodon"></i></a></li>
-					<li><a href="#" class="blogger"><i class="fa-brands fa-blogger"></i></a></li>
-					<li><a href="#" class="digg"><i class="fa-brands fa-digg"></i></a></li>
-					<li><a href="#" class="evernote"><i class="fa-brands fa-evernote"></i></a></li>
-					<li><a href="#" class="flipboard"><i class="fa-brands fa-flipboard"></i></a></li>
-					<li><a href="#" class="messenger"><i class="fa-brands fa-facebook-messenger"></i></a></li>
-					<li><a href="#" class="pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
-					<li><a href="#" class="print"><i class="fa fa-print"></i></a></li>
-					<li><a href="#" class="tumblr"><i class="fa-brands fa-tumblr"></i></a></li>
-					<li><a href="#" class="vk"><i class="fa-brands fa-vk"></i></a></li>
-					<li><a href="#" class="rocketchat"><i class="fa-brands fa-rocketchat"></i></a></li>
-					<li><a href="#" class="weibo"><i class="fa-brands fa-weibo"></i></a></li>
-					<li><a href="#" class="xing"><i class="fa-brands fa-xing"></i></a></li>
-					<li><a href="#" class="printPDF"><i class="fa fa-file-pdf"></i></a></li>
-				</ul>
-			</nav>
-		</div>
-        
-        <h2>Inline Example with Custom Theme</h2>
-		<p>Just adding the class customtheme to your nav allows you to overide the overall look.</p>
-        <div id="inline-custom-theme-example"  class="mb-5">
-            <nav class="socialshare inlinesocials customtheme">
-				<ul class="social-icons">
-					<li><a href="#" class="facebook"><i class="bx bxl-facebook"></i></a></li>
-					<li><a href="#" class="twitter"><i class="bx bxl-twitter"></i></a></li>
-					<li><a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a></li>
-					<li><a href="#" class="pinterest"><i class="bx bxl-pinterest"></i></a></li>
-					<li><a href="#" class="reddit"><i class="bx bxl-reddit"></i></a></li>
-					<li><a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i></a></li>
-					<li><a href="#" class="email"><i class="bx bx-envelope"></i></a></li>
-					<li><a href="#" class="sms"><i class="bx bx-message"></i></a></li>
-				</ul>
-			</nav>
-		</div>
-		
-		<h2>Generate your own HTML</h2>
-		<p>A custom generator for the HTML output is available here <a href="https://subtledifference.com.au/social-share-generator">https://subtledifference.com.au/social-share-generator</a>, the HTML for the icons was generated from that form.</p>
-		<p>Raw files can be found here <a href="https://github.com/SubtleDifference/SocialShare">https://github.com/SubtleDifference/SocialShare</a></p>
-		<p><em>Don't forget to include the relevant ICON style for your theme</em></p>
-    </div>
+    <main>
+        <header>
+            <h1>A little easier to share.</h1>
+            <p>Small, accessible sharing controls. No icon fonts, frameworks or external requests until you choose a destination.</p>
+        </header>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <section aria-labelledby="inline-heading">
+            <h2 id="inline-heading">Drop it into a page</h2>
+            <p>Choose the destinations you need. The library builds labelled links and buttons.</p>
+            <nav class="socialshare inlinesocials" aria-label="Share this example"
+                 data-ss-platforms="facebook linkedin bluesky whatsapp email copy"
+                 data-ss-text="A small sharing component from Subtle Difference."></nav>
+            <pre><code>&lt;nav class="socialshare inlinesocials"
+     aria-label="Share this page"
+     data-ss-platforms="facebook linkedin bluesky email copy"&gt;&lt;/nav&gt;</code></pre>
+        </section>
 
+        <section aria-labelledby="theme-heading">
+            <h2 id="theme-heading">Make it your own</h2>
+            <p>Use CSS variables for the colour, shape and spacing. Share opens the device chooser where available; otherwise it becomes Copy link.</p>
+            <nav class="socialshare inlinesocials customtheme" aria-label="Share with the custom theme"
+                 data-ss-platforms="share copy print"></nav>
+            <pre><code>.socialshare.customtheme {
+    --ss-background: #4e1741;
+    --ss-radius: 8px;
+    --ss-gap: 12px;
+}</code></pre>
+        </section>
 
-	<script>
+        <section aria-labelledby="legacy-heading">
+            <h2 id="legacy-heading">Your existing markup still works</h2>
+            <p>Keep the layout classes, service classes and data attributes. Extra styling classes are welcome. Your own icons or inline SVGs can stay inside each control.</p>
+            <nav class="socialshare inlinesocials" aria-label="Share with legacy markup">
+                <ul class="social-icons">
+                    <li><a href="#" class="facebook extra-class" data-ss-title="Share on Facebook">Facebook</a></li>
+                    <li><a href="#" class="twitter extra-class" data-ss-handle="SubtleDiff" data-ss-text="Worth sharing.">X / Twitter</a></li>
+                    <li><a href="#" class="copy" data-ss-title="Copy this page’s address">Copy link</a></li>
+                </ul>
+            </nav>
+        </section>
 
+        <section aria-labelledby="floating-heading">
+            <h2 id="floating-heading">Or keep sharing within reach</h2>
+            <p>The fixed group sits at the left on larger screens and at the bottom on smaller screens. Keep the list short and leave space for it in your page layout.</p>
+            <nav class="socialshare fixedsocials" aria-label="Quick share"
+                 data-ss-platforms="facebook linkedin email copy"></nav>
+        </section>
 
-    const socialIcons = document.querySelectorAll('.socialshare a');
-
-    console.log(socialIcons);
-
-    socialIcons.forEach(icon => {
-
-        icon.addEventListener('click', e => {
-            e.preventDefault();
-            const url = encodeURIComponent(window.location.href);
-            const social = icon.classList[1]; // get the second class name (e.g. facebook, twitter, linkedin, sms)
-            const handle = icon.dataset.ssHandle; // get the value of the data-ss-handle attribute
-            let shareUrl = '';
-            if (social === 'sms') {
-                shareUrl = `sms:?&body=${url}`;
-                window.location.href = shareUrl;
-            } else {
-                shareUrl = getShareUrl(social, url, handle); // pass handle to getShareUrl function
-                window.open(shareUrl, '_blank');
-            }
-        });
-
-    });
-
-    function getShareUrl(social, url, handle) {
-        let shareUrl = '';
-        switch (social) {
-            case 'facebook':
-                shareUrl = `https://www.facebook.com/sharer.php?u=${url}`;
-                break;
-            case 'twitter':
-                shareUrl = `https://twitter.com/intent/tweet?url=${url}`;
-                if (handle) {
-                    shareUrl += `&via=${handle}`;
-                }
-                break;
-            case 'linkedin':
-                shareUrl = `https://www.linkedin.com/shareArticle?url=${url}`;
-                break;
-            case 'email':
-                shareUrl = `mailto:?body=${url}`;
-                break;
-            case 'sms':
-                shareUrl = `sms:?&body=${url}`;
-                break;
-            case 'reddit':
-                shareUrl = `https://www.reddit.com/submit?url=${url}`;
-                break;
-            case 'whatsapp':
-                shareUrl = `https://api.whatsapp.com/send?text=${url}`;
-                break;
-            case 'pinterest':
-                shareUrl = `https://www.pinterest.com/pin/create/button/?url=${url}`;
-                break;
-            default:
-                shareUrl = url;
-        }
-        return shareUrl;
-    }
-
-
-	
-	</script>
-	
+        <footer>
+            <a href="../README.md">Documentation</a>
+            <a href="https://github.com/SubtleDifference/SocialShare">Source on GitHub</a>
+        </footer>
+    </main>
 </body>
 </html>

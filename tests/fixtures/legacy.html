@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SocialShare compatibility fixture</title>
+<link rel="stylesheet" href="../../src/socialshare.min.css">
+<script src="../../src/socialshare.min.js" defer></script></head><body>
+<form id="form">
+<nav id="legacy" class="socialshare inlinesocials customtheme" aria-label="Legacy share"
+     data-ss-url="https://example.test/shared?ref=a&amp;b=%20#fragment" data-ss-text="Container text">
+<ul class="social-icons">
+<li><a id="facebook" href="#" class="utility facebook rounded" data-ss-title="Share on Facebook"><i id="custom-icon" class="custom-icon">F</i></a></li>
+<li><a id="twitter" href="#" class="utility twitter" data-ss-handle="name&amp;text=oops" data-ss-text="">X</a></li>
+<li><a id="copy" href="#" class="copy">Copy link</a></li>
+<li><button id="print" class="print">Print</button></li>
+<li><a id="unknown" href="#untouched" class="not-a-service">Normal link</a></li>
+<li><button id="named" data-ss-action="copy" aria-label="Keep this name"><svg id="custom-svg" viewBox="0 0 24 24"><path d="M2 2h20v20H2z"/></svg></button></li>
+</ul></nav></form>
+<nav id="generated" class="socialshare inlinesocials" aria-label="Generated share" data-ss-platforms="facebook,x,bluesky,linkedin,email,sms,reddit,whatsapp,pinterest,mastodon,copy,blogger,digg,evernote,flipboard,messenger,print,tumblr,vk,rocketchat,weibo,xing,printPDF,share"></nav>
+<ul class="social-icons"><li><a id="standalone" href="#" class="extra facebook">Standalone legacy control</a></li></ul>
+<nav id="legacy-fixed" class="socialshare fixedsocials" aria-label="Legacy fixed icons">
+<ul class="social-icons"><li><a href="#" class="facebook"><i aria-hidden="true"></i></a></li></ul>
+</nav>
+</body></html>

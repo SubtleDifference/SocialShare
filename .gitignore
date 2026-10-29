@@ -1,0 +1,6 @@
+node_modules/
+output/
+*.log
+
+# Local workspace bookkeeping; not part of the library distribution.
+/docs/design/workflow-status.md
