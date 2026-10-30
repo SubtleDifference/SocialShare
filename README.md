@@ -1,6 +1,12 @@
 # SocialShare
 
-Small, dependency-free sharing controls for websites. Inline and fixed layouts, text labels, optional custom icons, and all existing service classes remain supported.
+A few share buttons shouldn’t need a bloated script to do a simple job. SocialShare’s **minified JavaScript and CSS come to just 12.2 kB combined**. No frameworks, icon fonts or runtime dependencies.
+
+**[Use the SocialShare generator](https://subtledifference.com.au/resource-display/socialshare-button-builder)** to choose your buttons, colours and layout, see a live preview and copy the code for your site.
+
+Version 1.1.1: 7.3 kB JavaScript + 4.9 kB CSS, before compression.
+
+Inline and fixed layouts, text labels, optional custom icons, and all existing service classes remain supported.
 
 ## Quick start
 
